@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <h1 className="text-2xl text-center">Contact</h1>;
+      <h1 className="text-2xl text-center">Contact</h1>
     </>
   );
 }
