@@ -4,7 +4,9 @@ export default function About() {
   return (
     <>
       <Header />
-      <h1 className="text-2xl text-center">About</h1>
+      <section>
+        <h1 className="text-2xl text-center">About</h1>
+      </section>
     </>
   );
 }
