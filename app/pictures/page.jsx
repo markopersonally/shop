@@ -1,19 +1,17 @@
 import Header from "@/components/header.jsx";
+// import Picture from "./Picture.jsx";
 
 export default function Pictures() {
-  const divPicutre = "w-[250px] h-[250px] border-2 border-red-200"
-  
+  const h1Styled = "mt-[50px] text-4xl text-center italic text-fuchsia-200";
+  const divBox = "mt-[150px] flex justify-center flex-wrap gap-[50px]";
+
   return (
     <>
       <Header />
       <section>
-        <h1 className="text-2xl text-center">Pictures</h1>
-        <div className="mt-[150px] flex justify-center">
-          <div className={divPicutre}>1</div>
-          <div className={divPicutre}>2</div>
-          <div className={divPicutre}>3</div>
-          <div className={divPicutre}>4</div>
-          <div className={divPicutre}>5</div>
+        <h1 className={h1Styled}>My pictures</h1>
+        <div className={divBox}>
+          {/* <Picture /> */}
         </div>
       </section>
     </>
