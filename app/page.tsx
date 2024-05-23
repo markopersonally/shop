@@ -1,12 +1,14 @@
 import Header from "@/components/header.jsx";
 
 export default function Home() {
-  const h1Classes = "text-center fz-[32px]";
-  const divContainer = "w-full flex gap-[50px] justify-around";
-  const divParagraph =
-    "flex flex-col items-center text-center border-2 border-white w-[500px]";
-  const h2Classes = "text-orange-600";
-  const pClasses = "text-orange-400";
+  const h1Classes =
+    "text-center fz-[32px] text-4xl italic uppercase text-fuchsia-100";
+  const divContainer =
+    "mt-[45px] w-full flex items-center gap-[50px] justify-around";
+  const divParagraph = "flex flex-col items-center text-center w-[500px]";
+  const h2Classes = "text-2xl text-fuchsia-400";
+  const pClasses = "text-lg text-fuchsia-200 leading-normal";
+  const divPicture = "w-[500px] h-[500px] bg-home-img";
 
   return (
     <>
@@ -29,7 +31,7 @@ export default function Home() {
                 paintings inspire you as much as they inspire me.
               </p>
             </div>
-            <div className="border-2 border-white w-[500px] h-[500px]"></div>
+            <div className={divPicture}></div>
           </div>
         </section>
       </main>
