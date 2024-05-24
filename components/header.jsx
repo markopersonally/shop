@@ -11,26 +11,18 @@ export default function Header() {
       <nav className={navClasses}>
         <div className={logoClasses}>logo</div>
         <ul className={ulClasses}>
-          <li>
-            <Link className={linkClasses} href="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className={linkClasses} href="/about">
-              About Me
-            </Link>
-          </li>
-          <li>
-            <Link className={linkClasses} href="/pictures">
-              Pictures
-            </Link>
-          </li>
-          <li>
-            <Link className={linkClasses} href="/contact">
-              Contact
-            </Link>
-          </li>
+          <Link className={linkClasses} href="/">
+            Home
+          </Link>
+          <Link className={linkClasses} href="/about">
+            About Me
+          </Link>
+          <Link className={linkClasses} href="/pictures">
+            Pictures
+          </Link>
+          <Link className={linkClasses} href="/contact">
+            Contact
+          </Link>
         </ul>
       </nav>
     </header>
