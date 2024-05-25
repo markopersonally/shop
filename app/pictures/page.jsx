@@ -1,14 +1,19 @@
 import Section from "@/components/section.jsx";
 import PICTURE_DATA from "./data.ts";
 import Image from "next/image";
+import { IoMdAdd } from "react-icons/io";
 
 export default function SectionPictures() {
-  const h1Styled = "mt-[50px] text-4xl text-center italic text-fuchsia-200";
+  const h1Styled = "mt-[50px] text-4xl text-center italic";
   const divWrapper =
-    "p-[50px] flex flex-wrap gap-[50px] justify-center items-center";
+    "p-[50px] flex flex-wrap gap-[50px] justify-center items-center ";
   const divPicture =
-    "w-[250px] h-[250px] flex flex-col items-center gap-[15px] border-2 border-red-200";
-  const imgStyled = "w-full h-full";
+    "p-[20px] w-[250px] h-max flex flex-col items-center gap-[15px] border-2 border-neutral-900 bg-neutral-300 rounded-xl drop-shadow-xl";
+  const imgStyled = "border-[15px] border-neutral-950";
+  const divDescription =
+    "p-[5px] w-full flex justify-between items-center uppercase text-center font-bold ";
+  const priceStyled = "text-red-400 italic";
+  const buttonAddStyled = "p-2 text-2xl text-neutral-100 bg-neutral-800 rounded-full hover:bg-neutral-500";
 
   return (
     <Section>
@@ -21,8 +26,15 @@ export default function SectionPictures() {
               src={picture.img}
               alt={picture.title}
             />
-            <h3>{picture.title}</h3>
-            <h3>{picture.price}</h3>
+            <div className={divDescription}>
+              <div>
+                <h3>: {picture.title}</h3>
+                <h3 className={priceStyled}>P: {picture.price}</h3>
+              </div>
+              <button className={buttonAddStyled}>
+                <IoMdAdd />
+              </button>
+            </div>
           </div>
         ))}
       </div>

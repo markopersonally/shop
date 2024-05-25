@@ -1,5 +1,5 @@
 export default function Footer() {
-  const footerStyled = "p-5 bg-gray-500 flex gap-[20px] justify-around";
+  const footerStyled = "p-5 bg-neutral-800 text-neutral-100 flex gap-[20px] justify-around";
 
   return (
     <footer className={footerStyled}>
