@@ -1,10 +1,10 @@
 import Section from "@/components/section.jsx";
+import H2 from "@/components/h2.jsx";
 import PICTURE_DATA from "./data.ts";
 import Image from "next/image";
 import { IoMdAdd } from "react-icons/io";
 
 export default function SectionPictures() {
-  const h1Styled = "mt-[50px] text-4xl text-center italic";
   const divWrapper =
     "p-[50px] flex flex-wrap gap-[50px] justify-center items-center ";
   const divPicture =
@@ -13,11 +13,12 @@ export default function SectionPictures() {
   const divDescription =
     "p-[5px] w-full flex justify-between items-center uppercase text-center font-bold ";
   const priceStyled = "text-red-400 italic";
-  const buttonAddStyled = "p-2 text-2xl text-neutral-100 bg-neutral-800 rounded-full hover:bg-neutral-500";
+  const buttonAddStyled =
+    "p-2 text-2xl text-neutral-100 bg-neutral-800 rounded-full hover:bg-neutral-500";
 
   return (
     <Section>
-      <h1 className={h1Styled}>My pictures</h1>
+      <H2>My pictures</H2>
       <div className={divWrapper}>
         {PICTURE_DATA.map((picture) => (
           <div key={picture.id} id={picture.id} className={divPicture}>

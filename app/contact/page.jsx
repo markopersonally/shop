@@ -1,7 +1,7 @@
 import Section from "@/components/section.jsx";
+import H2 from "@/components/h2.jsx";
 
 export default function Contact() {
-  const h1Styled = "mt-[50px] text-4xl text-2xl text-center";
   const divContainer =
     "mt-[50px] flex justify-center align-center gap-[50px] border-2 border-red-200";
   const divContainerElements =
@@ -9,7 +9,7 @@ export default function Contact() {
 
   return (
     <Section>
-      <h1 className={h1Styled}>Contact</h1>
+      <H2>Contact</H2>
       <div className={divContainer}>
         <div className={divContainerElements}>
           <div>img</div>

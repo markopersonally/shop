@@ -1,6 +1,5 @@
 import Image from "next/image";
 import homeImg from "@/images/teddy-ai.jpg";
-import Section from "@/components/section";
 
 export default function Home() {
   const mainStyled = "my-[50px] flex flex-col gap-10";
