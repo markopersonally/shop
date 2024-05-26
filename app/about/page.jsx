@@ -1,9 +1,10 @@
 import Section from "@/components/section.jsx";
+import H2 from "@/components/h2.jsx";
 
 export default function About() {
   return (
     <Section>
-      <h1 className="text-2xl text-center">About</h1>
+      <H2>About</H2>
       <p>
         Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum
         dolor sit amet consectetur adipisicing elit. Perspiciatis commodi sit
