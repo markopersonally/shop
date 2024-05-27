@@ -1,5 +1,7 @@
 import Image from "next/image";
 import homeImg from "@/images/teddy-ai.jpg";
+import H2 from "@/components/h2.jsx";
+import Link from "next/link";
 
 export default function Home() {
   const mainStyled = "my-[50px] flex flex-col gap-10";
@@ -11,6 +13,8 @@ export default function Home() {
   const h2Classes = "text-2xl";
   const pClasses = "text-lg leading-normal";
   const imageStyled = "rounded-xl";
+  const linksWrapper = "my-[50px] flex justify-around gap-[50px]";
+  const linkStyled = "p-[10px] uppercase border-2 border-neutral-700 hover:text-neutral-400";
 
   return (
     <main className={mainStyled}>
@@ -31,6 +35,26 @@ export default function Home() {
           </p>
         </div>
         <Image className={imageStyled} src={homeImg} alt="teddy-ai" />
+      </div>
+      <div>
+        <H2>picture motif</H2>
+        <div className={linksWrapper}>
+          <Link className={linkStyled} href="/pictures">
+            nature
+          </Link>
+          <Link className={linkStyled} href="/pictures">
+            animal
+          </Link>
+          <Link className={linkStyled} href="/pictures">
+            flowers
+          </Link>
+          <Link className={linkStyled} href="/pictures">
+            abstract
+          </Link>
+          <Link className={linkStyled} href="/pictures">
+            fantasies
+          </Link>
+        </div>
       </div>
     </main>
   );

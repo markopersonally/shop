@@ -1,30 +1,37 @@
 import Section from "@/components/section.jsx";
 import H2 from "@/components/h2.jsx";
+import { FaInstagram } from "react-icons/fa6";
+import { AiFillTikTok } from "react-icons/ai";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function Contact() {
-  const divContainer =
-    "mt-[50px] flex justify-center align-center gap-[50px] border-2 border-red-200";
+  const divContainer = "mt-[50px] flex justify-center gap-[50px]";
   const divContainerElements =
-    "w-[350px] h-[350px] text-center flex-col justify-center content-center border-2 border-red-100";
+    "w-[350px] h-[350px] flex flex-col justify-center items-center gap-[20px] border-2 border-neutral-900 rounded-[15px] shadow-divContactShadow";
+  const iconStyled = "text-6xl hover:scale-90";
+  const descStyled = "font-bold";
 
   return (
     <Section>
       <H2>Contact</H2>
       <div className={divContainer}>
         <div className={divContainerElements}>
-          <div>img</div>
-          <h3>icon</h3>
-          <h4>text</h4>
+          <h3 className={iconStyled}>
+            <MdOutlineEmail />
+          </h3>
+          <h4 className={descStyled}>Email: @email</h4>
         </div>
         <div className={divContainerElements}>
-          <div>img</div>
-          <h3>icon</h3>
-          <h4>text</h4>
+          <h3 className={iconStyled}>
+            <FaInstagram />
+          </h3>
+          <h4 className={descStyled}>Instagram: @instagram</h4>
         </div>
         <div className={divContainerElements}>
-          <div>img</div>
-          <h3>icon</h3>
-          <h4>text</h4>
+          <h3 className={iconStyled}>
+            <AiFillTikTok />
+          </h3>
+          <h4 className={descStyled}>TikTok: @tiktok</h4>
         </div>
       </div>
     </Section>

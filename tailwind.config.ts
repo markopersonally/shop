@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "pAboutShadow": "17px 0px 50px 10px rgba(66, 68, 90, 1)",
+        "imgAboutShadow": "-20px 0px 50px 7px rgba(66, 68, 90, 1)",
+        "divContactShadow": "inset 0px 0px 50px -8px rgba(66, 68, 90, 1)"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
