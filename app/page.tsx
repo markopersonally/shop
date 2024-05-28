@@ -14,7 +14,7 @@ export default function Home() {
   const pClasses = "text-lg leading-normal";
   const imageStyled = "rounded-xl";
   const linksWrapper = "my-[50px] flex justify-around gap-[50px]";
-  const linkStyled = "p-[10px] uppercase border-2 border-neutral-700 hover:text-neutral-400";
+  const linkStyled = "p-[10px] uppercase border-2 border-neutral-700 rounded-xl hover:text-neutral-300 hover:bg-neutral-700";
 
   return (
     <main className={mainStyled}>
