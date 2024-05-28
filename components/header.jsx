@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaPaintBrush } from "react-icons/fa";
+import { MdOutlineLocalGroceryStore } from "react-icons/md";
 
 export default function Header() {
   const navClasses =
@@ -26,6 +27,9 @@ export default function Header() {
           </Link>
           <Link className={linkClasses} href="/contact">
             Contact
+          </Link>
+          <Link className={linkClasses} href="/store">
+            <MdOutlineLocalGroceryStore />
           </Link>
         </ul>
       </nav>
