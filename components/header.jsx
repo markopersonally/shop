@@ -16,13 +16,16 @@ export default function Header() {
   const navClasses =
     "p-3 flex items-center justify-between bg-neutral-800 text-neutral-100";
   const ulClasses = "flex items-center gap-[50px] text-xl p-3";
-  const linkClasses = " border-2 p-3 rounded-lg hover:bg-neutral-600";
-  const logoClasses = "border-2 p-5 rounded-full cursor";
+  const linkClasses = "border-2 p-3 rounded-lg hover:bg-neutral-600";
+  const logoClasses = "border-2 p-5 rounded-full cursor-pointer";
 
   const burgerMenu = "text-[35px] cursor-pointer";
-  const mobileMenuClasses = navMobile ? "flex" : "hidden";
+  const mobileMenuClasses = navMobile
+    ? "max-h-screen opacity-100"
+    : "max-h-0 opacity-0";
   const mobileClasses = "w-full flex justify-around";
-  const mobileUlClasses = "w-full flex flex-col items-center";
+  const mobileUlClasses =
+    "w-full flex flex-col items-center overflow-hidden transition-all duration-500 ease-linear";
   const mobileLinkClasses = "border-0";
 
   return (
