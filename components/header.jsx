@@ -15,13 +15,18 @@ export default function Header() {
 
   const navClasses =
     "p-3 flex items-center justify-between bg-neutral-800 text-neutral-100";
-  const ulClasses = "flex gap-[50px] text-2xl p-3";
-  const linkClasses = " border-2 p-3 rounded-lg hover:bg-neutral-600";
-  const logoClasses = "border-2 p-5 rounded-full cursor";
+  const ulClasses = "flex items-center gap-[50px] text-xl p-3";
+  const linkClasses = "border-2 p-3 rounded-lg hover:bg-neutral-600";
+  const logoClasses = "border-2 p-5 rounded-full cursor-pointer";
 
   const burgerMenu = "text-[35px] cursor-pointer";
-  const mobileMenuClasses = navMobile ? "flex" : "hidden";
-  const navMobileClasses = "flex flex-col";
+  const mobileMenuClasses = navMobile
+    ? "max-h-screen opacity-100"
+    : "max-h-0 opacity-0";
+  const mobileClasses = "w-full flex justify-around";
+  const mobileUlClasses =
+    "w-full flex flex-col items-center overflow-hidden transition-all duration-500 ease-linear";
+  const mobileLinkClasses = "border-0";
 
   return (
     <header>
@@ -50,26 +55,32 @@ export default function Header() {
       </nav>
       {/* tablet/mobile */}
       <nav className={`${navClasses} flex-col lg:hidden`}>
-        <div className={navMobileClasses}>
+        <div className={mobileClasses}>
           <Link href="/" className={logoClasses}>
             <FaPaintBrush />
           </Link>
           <TbMenuDeep onClick={handleToggle} className={burgerMenu} />
         </div>
-        <ul className={mobileMenuClasses}>
-          <Link className={linkClasses} href="/">
+        <ul className={`${mobileUlClasses} ${mobileMenuClasses}`}>
+          <Link className={`${linkClasses} ${mobileLinkClasses}`} href="/">
             Home
           </Link>
-          <Link className={linkClasses} href="/about">
+          <Link className={`${linkClasses} ${mobileLinkClasses}`} href="/about">
             About Me
           </Link>
-          <Link className={linkClasses} href="/pictures">
+          <Link
+            className={`${linkClasses} ${mobileLinkClasses}`}
+            href="/pictures"
+          >
             Pictures
           </Link>
-          <Link className={linkClasses} href="/contact">
+          <Link
+            className={`${linkClasses} ${mobileLinkClasses}`}
+            href="/contact"
+          >
             Contact
           </Link>
-          <Link className={linkClasses} href="/store">
+          <Link className={`${linkClasses} ${mobileLinkClasses}`} href="/store">
             <MdOutlineLocalGroceryStore />
           </Link>
         </ul>
