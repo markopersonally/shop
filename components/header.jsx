@@ -25,7 +25,7 @@ export default function Header() {
     : "max-h-0 opacity-0";
   const mobileClasses = "w-full flex justify-around";
   const mobileUlClasses =
-    "w-full flex flex-col items-center overflow-hidden transition-all duration-500 ease-linear";
+    "w-full flex flex-col items-center gap-4 overflow-hidden transition-all duration-500 ease-linear";
   const mobileLinkClasses = "border-0";
 
   return (

@@ -6,14 +6,14 @@ import Link from "next/link";
 export default function Home() {
   const mainStyled = "my-[50px] flex flex-col gap-10";
   const h1Classes =
-    "m-auto w-[800px] p-4 text-center fz-[32px] text-4xl italic uppercase border-2 border-neutral-800 rounded-xl";
-  const divContainer = "w-full flex items-center gap-[50px] justify-center";
+    "m-auto w-[800px] max-md:w-auto p-4 text-center text-4xl max-md:text-xl italic uppercase border-2 border-neutral-800 rounded-xl";
+  const divContainer = "w-full flex flex-wrap items-center gap-[50px] justify-center";
   const divParagraph =
     "w-[500px] p-4 flex flex-col items-center text-center border-2 border-neutral-800 rounded-xl";
-  const h2Classes = "text-2xl";
-  const pClasses = "text-lg leading-normal";
-  const imageStyled = "rounded-xl";
-  const linksWrapper = "my-[50px] flex justify-around gap-[50px]";
+  const h2Classes = "text-2xl max-md:text-lg";
+  const pClasses = "text-lg leading-normal max-md:text-sm";
+  const imageStyled = "rounded-xl max-md:w-[350px] h-[350px]";
+  const linksWrapper = "my-[50px] flex flex-wrap justify-around gap-[50px]";
   const linkStyled = "p-[10px] uppercase border-2 border-neutral-700 rounded-xl hover:text-neutral-300 hover:bg-neutral-700";
 
   return (
