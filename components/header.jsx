@@ -25,7 +25,7 @@ export default function Header() {
     : "max-h-0 opacity-0";
   const mobileClasses = "w-full flex justify-around";
   const mobileUlClasses =
-    "w-full flex flex-col items-center overflow-hidden transition-all duration-500 ease-linear";
+    "w-full flex flex-col items-center gap-4 overflow-hidden transition-all duration-500 ease-linear";
   const mobileLinkClasses = "border-0";
 
   return (
@@ -48,10 +48,10 @@ export default function Header() {
           <Link className={linkClasses} href="/contact">
             Contact
           </Link>
-          <Link className={linkClasses} href="/store">
-            <MdOutlineLocalGroceryStore />
-          </Link>
-        </ul>
+        </ul>{" "}
+        <Link className={linkClasses} href="/store">
+          <MdOutlineLocalGroceryStore />
+        </Link>
       </nav>
       {/* tablet/mobile */}
       <nav className={`${navClasses} flex-col lg:hidden`}>
@@ -59,7 +59,15 @@ export default function Header() {
           <Link href="/" className={logoClasses}>
             <FaPaintBrush />
           </Link>
-          <TbMenuDeep onClick={handleToggle} className={burgerMenu} />
+          <div className="flex items-center gap-10">
+            <TbMenuDeep onClick={handleToggle} className={burgerMenu} />
+            <Link
+              className={`${linkClasses} ${mobileLinkClasses}`}
+              href="/store"
+            >
+              <MdOutlineLocalGroceryStore />
+            </Link>
+          </div>
         </div>
         <ul className={`${mobileUlClasses} ${mobileMenuClasses}`}>
           <Link className={`${linkClasses} ${mobileLinkClasses}`} href="/">
@@ -79,9 +87,6 @@ export default function Header() {
             href="/contact"
           >
             Contact
-          </Link>
-          <Link className={`${linkClasses} ${mobileLinkClasses}`} href="/store">
-            <MdOutlineLocalGroceryStore />
           </Link>
         </ul>
       </nav>

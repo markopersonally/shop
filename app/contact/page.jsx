@@ -6,9 +6,9 @@ import { MdOutlineEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
 export default function Contact() {
-  const divContainer = "m-[50px] flex justify-center gap-[50px]";
+  const divContainer = "m-[50px] flex flex-wrap justify-center gap-[50px]";
   const divContainerElements =
-    "w-[350px] h-[350px] flex flex-col justify-center items-center gap-[20px] border-2 border-neutral-900 rounded-[15px] shadow-divContactShadow";
+    "w-[350px] h-[350px] max-md:w-[250px] max-md:h-[250px] flex flex-col justify-center items-center gap-[20px] border-2 border-neutral-900 rounded-[15px] shadow-divContactShadow";
   const iconStyled = "text-6xl hover:scale-90";
   const descStyled = "font-bold";
 
