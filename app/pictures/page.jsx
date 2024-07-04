@@ -3,6 +3,7 @@ import H2 from "@/components/h2.jsx";
 import PICTURE_DATA from "./data.ts";
 import Image from "next/image";
 import { IoMdAdd } from "react-icons/io";
+import { useCart } from "@/context/CartContext.jsx";
 
 export default function SectionPictures() {
   const divWrapper =
@@ -15,6 +16,8 @@ export default function SectionPictures() {
   const priceStyled = "text-red-400 italic";
   const buttonAddStyled =
     "p-2 text-2xl text-neutral-100 bg-neutral-800 rounded-full hover:bg-neutral-500";
+
+  const { addToCart } = useCart();
 
   return (
     <Section>
@@ -32,7 +35,10 @@ export default function SectionPictures() {
                 <h3>: {picture.title}</h3>
                 <h3 className={priceStyled}>P: {picture.price}</h3>
               </div>
-              <button className={buttonAddStyled}>
+              <button
+                className={buttonAddStyled}
+                onClick={() => addToCart(picture)}
+              >
                 <IoMdAdd />
               </button>
             </div>
